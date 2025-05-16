@@ -1,0 +1,33 @@
+@font-face {
+    font-family: FiraCode;
+    src: url(../res/fonts/FiraCode/FiraCode-Regular.ttf);
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url(../res/fonts/FiraCode/FiraCode-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url(../res/fonts/FiraCode/FiraCode-Light.ttf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: MPlusCode;
+    src: url(../res/fonts/MPlusCode/MPLUSCodeLatin-Regular.ttf);
+}
+
+@font-face {
+    font-family: MPlusCode;
+    src: url(../res/fonts/MPlusCode/MPLUSCodeLatin-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: MPlusCode;
+    src: url(../res/fonts/MPlusCode/MPLUSCodeLatin-Light.ttf);
+    font-weight: lighter;
+}
