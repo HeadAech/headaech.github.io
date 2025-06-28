@@ -217,3 +217,33 @@ a.btn-outline-primary:hover {
 #engine-history {
     clear: both;
 }
+
+.download-card {
+    width: 30rem;
+}
+
+@media (max-width: 900px) {
+    .main {
+        width: 95%;
+    }
+
+    .screenshot-card {
+        max-width: 92%;
+    }
+
+    .tableofcontents {
+        clear: both;
+        width: 90%;
+        margin: auto;
+        float: left;
+    }
+
+    .engine-intro {
+        width: 100%;
+        clear: both;
+    }
+
+    .download-card {
+        width: 100%;
+    }
+}
