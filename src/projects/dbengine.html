@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dBengine</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+
+    <link rel="stylesheet" href="/src/style.css">
+
+    <script src="/src/js/inject.js" defer></script>
+    <script src="/src/js/main.js" type="text/javascript"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div class="main">
+
+        <div class="card tableofcontents">
+            <div class="card-body">
+                <h2>Table of contents</h2>
+                <div class="list-group">
+                    <a href="#engine-history" class="list-group-item list-group-item-action">
+                        History
+                    </a>
+                    <a href="#engine-features" class="list-group-item list-group-item-action">
+                        Features
+                    </a>
+                    <a href="#engine-dbengine" class="list-group-item list-group-item-action">
+                        dBengine - Core
+                    </a>
+                    <a href="#engine-dbrender" class="list-group-item list-group-item-action">
+                        dBrender - Rendering Engine
+                    </a>
+                    <a href="#engine-dbphysics" class="list-group-item list-group-item-action">
+                        dBphysics - Physics Engine
+                    </a>
+                    <a href="#engine-dbeditor" class="list-group-item list-group-item-action">
+                        dBeditor
+                    </a>
+                    <a href="#engine-structure" class="list-group-item list-group-item-action">
+                        Structure
+                    </a>
+                    <a href="#engine-download" class="list-group-item list-group-item-action">
+                        Download
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <img class="dbengine-logo" src="/res/img/dbengine/dBengine_logo_white.png" alt="Logo">
+        <br>
+        <div class="engine-intro">
+            <p>A game engine designed for creating 3D and <i>soon&trade; </i> 2D games. It is built with a focus on
+                performance, flexibility, and ease of use.</p>
+            <p>It is written in <code>C++</code> and relies on OpenGL graphics API for rendering.</p>
+        </div>
+
+
+
+
+        <section id="engine-history">
+
+
+            <h2>History</h2>
+            <hr>
+            <p>Development of dBengine began in late March 2025. It was initially a university project that would later
+                enable us to create a 3D game.</p>
+            <p>My goal was to not create an engine for a <i>specific</i> game, but to build a versatile tool that could
+                be
+                used for various types of games.</p>
+            <p>It underwent several iterations and improvements, with feedback from early users helping to shape its
+                development. <br>Main changes were to the design of the editor - <b>Yes!</b> - dBengine contains a
+                built-in
+                editor to boost productivity and streamline the game development process.</p>
+
+            <div class="screenshot-card card mb-3 ">
+                <img src="/res/img/dbengine/engine-first-screenshot.png" class="card-img-top card-img"
+                    alt="First screenshot of dBengine">
+                <div class="card-body">
+                    <p class="card-text">This is the first screenshot of dBengine and its' <i>editor</i>.</p>
+                </div>
+            </div>
+
+            <p>As you can see, the interface of the editor was <b><i>really</i></b> simple back then. But the most
+                important
+                thing shown on it is the first cube rendered by the engine. It was the big achievement for me at that
+                time.
+            </p>
+
+            <p>Next iteration of the editor introduced the next crucial functionality of the engine - <b>scripting</b>.
+            </p>
+
+            <div class="screenshot-card card mb-3 ">
+                <img src="/res/img/dbengine/spinning-cube.gif" class="card-img-top card-img"
+                    alt="Spinning cube in dBengine">
+                <div class="card-body">
+                    <p class="card-text">The spinning behavior of the cube was achieved through a script written in
+                        <code>Lua</code>.
+                    </p>
+                </div>
+            </div>
+
+            <p>The first <b>scripting</b> functionality was a significant milestone for dBengine, as it created a clear
+                separation between the game logic and the engine itself. This allowed for greater flexibility and easier
+                modifications in the future, as the gameplay could be easily adjusted without altering the core engine
+                code.
+            </p>
+
+            <div class="screenshot-card card mb-3 ">
+                <img src="/res/img/dbengine/code-editor.png" class="card-img-top card-img"
+                    alt="First iteration of code editor in dBengine">
+                <div class="card-body">
+                    <p class="card-text">With scripting came a really simple code editor built-in to dBengine's editor,
+                        allowing for easy editing of scripts directly within the engine.</p>
+                </div>
+            </div>
+
+            <p>As the engine evolved, it was clear to me, that editor needed <b>a complete overhaul</b> to accomodate
+                for
+                engine's more advanced features and improve overall usability.</p>
+
+            <div class="video-card card mb-3 ">
+                <video src="/res/img/dbengine/better-editor.mkv" class="card-img-top card-img"
+                    alt="Better editor in dBengine" muted controls autoplay loop></video>
+                <div class="card-body">
+                    <p class="card-text">Video showcases the improved editor interface and its new features.</p>
+                </div>
+            </div>
+
+            <p><b>New</b> and <b>improved</b> editor introduced:</p>
+            <ul>
+                <li>Redesigned user interface for better usability</li>
+                <li>Ability to instantiate game objects</li>
+                <li>Integrated debugging information and console</li>
+                <li>Inspector for manipulating game objects and their components</li>
+            </ul>
+
+            <p>But I didn't stop there. The editor continued to evolve to differentiate itself from other engines
+                available
+                at ZTGK challenge.</p>
+
+            <div class="screenshot-card card mb-3 ">
+                <img src="/res/img/dbengine/themed-editor.png" class="card-img-top card-img"
+                    alt="Themed editor in dBengine">
+                <div class="card-body">
+                    <p class="card-text">I've decided to theme the editor to give it a more modern and polished look
+                        (and to
+                        avoid being <i>just another ImGui wannabe editor</i>).</p>
+                </div>
+            </div>
+
+            <p>And when I say <i>themes</i>... I <b>mean</b> it.</p>
+
+            <div class="screenshot-card card mb-3 ">
+                <img src="/res/img/dbengine/themes.gif" class="card-img-top card-img"
+                    alt="Multiple themes in dBengine's editor">
+                <div class="card-body">
+                    <p class="card-text">Users are able to choose from a variety of themes to customize their editing
+                        experience, as well as create their own.</p>
+                </div>
+            </div>
+
+            <p class="centered">... And I think that's all for the history of dBengine... for now - of course.</p>
+        </section>
+
+        <section id="engine-features">
+
+
+            <h2>Features</h2>
+            <hr>
+
+            <p>dBengine is full of features designed to enhance the game development experience. However, the engine
+                itself
+                is split into 4 main components:</p>
+            <ul>
+                <li>dBengine</li>
+                <li>dBrender</li>
+                <li>dBphysics</li>
+                <li>dBeditor</li>
+            </ul>
+
+            <p>Each component serves a specific purpose and is designed to work seamlessly with the others.</p>
+        </section>
+        <!-- DBENGINE SECTION -->
+
+        <section id="engine-dbengine">
+            <h3>dBengine</h3>
+
+            <p>This is the core. It handles the initializations of the game window and other components. It's also
+                responsible for managing the main game loop and updating the game state.</p>
+
+            <div class="accordion" id="accordion-dbengine-features">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-input" aria-expanded="false" aria-controls="collapse-input">
+                            Input Handling
+                        </button>
+                    </h2>
+                    <div id="collapse-input" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+                            <p>dBengine allows users to create input <code>actions</code> and can detect if they are:
+                            </p>
+                            <ul>
+                                <li>just pressed</li>
+                                <li>just released</li>
+                                <li>held down</li>
+                            </ul>
+
+                            <div class="thumbnail-card card mb-3 ">
+                                <img src="/res/img/dbengine/input-manager.png" class="card-img-top card-img"
+                                    alt="Multiple themes in dBengine's editor">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Input manager is available in the editor.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-serialization" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Serialization
+                        </button>
+                    </h2>
+                    <div id="collapse-serialization" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+                            <p>Scenes and materials are preserved thanks to a custom serialization system. It allows for
+                                easy saving and loading every scene, resource in the game.</p>
+                            <p>Files are in <code>.yaml</code> format, however for specific types, different extensions
+                                are
+                                used:</p>
+
+                            <ul>
+                                <li>Scenes - <code>.scene</code></li>
+                                <li>Resources - <code>.res</code></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-resource-manager" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Resource Manager
+                        </button>
+                    </h2>
+                    <div id="collapse-resource-manager" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+
+                            <p>
+                                The resource manager is responsible for loading and managing resources such as
+                                textures, models, and materials. It ensures that resources are loaded only once and
+                                reused
+                                to
+                                improve performance and reduce memory usage.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-async" aria-expanded="false" aria-controls="collapse-input">
+                            Asynchronous Loading
+                        </button>
+                    </h2>
+                    <div id="collapse-async" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+
+                            <p>
+                                dBengine supports asynchronous loading of resources (for Resource Manager) and scenes,
+                                as
+                                well as processing animations, allowing for smoother gameplay and
+                                faster loading times.
+                            </p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/no-async.png" class="card-img-top card-img"
+                                    alt="Themed editor in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Loading of the engine <b>without</b> asynchronous loading.</p>
+                                </div>
+                            </div>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/async.png" class="card-img-top card-img"
+                                    alt="Themed editor in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Loading of the engine <b>with</b> asynchronous loading.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-scripting" aria-expanded="false"
+                            aria-controls="collapse-scripting">
+                            Scripting
+                        </button>
+                    </h2>
+                    <div id="collapse-scripting" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+
+                            <p>
+                                Engine allows users to write scripts in <code>Lua</code> to control game
+                                logic and behavior. Scripts can be attached to game objects, allowing for dynamic
+                                interactions and events.
+                            </p>
+
+                            <p>This is especially useful when creating complex game mechanics or AI behaviors, as users
+                                can change scripts and see results in real-time.</p>
+
+                            <p>The engine provides a built-in Lua interpreter that can execute scripts
+                                on the fly. Users can also access engine APIs from their scripts, allowing for deep
+                                integration with the engine's features.</p>
+
+                            <p>To achieve this functionality, a <a href="https://github.com/ThePhD/sol2"
+                                    target="_blank">sol2</a>
+                                library was used to facilitate the binding of C++ and Lua.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/script.webp" class="card-img-top card-img"
+                                    alt="Scripting in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">See changes to scripts in real-time.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-pathfinding" aria-expanded="false" aria-controls="collapse-input">
+                            A* Pathfinding
+                        </button>
+                    </h2>
+                    <div id="collapse-pathfinding" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+                            <p>Pathfinding is implemented using the A* algorithm, which is widely used for its
+                                performance and accuracy in navigating complex environments.</p>
+
+                            <p>Navigation mesh is generated which allows agents to find their way through the game world
+                                efficiently.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/pathfinding.webp" class="card-img-top card-img"
+                                    alt="Pathfinding in dBengine">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-signals" aria-expanded="false" aria-controls="collapse-input">
+                            Signals
+                        </button>
+                    </h2>
+                    <div id="collapse-signals" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbengine-features">
+                        <div class="accordion-body">
+                            <p>Signals are used to communicate at engine level and script-script level.</p>
+                            <p>It enables quick communication between game objects and scripts.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <br>
+        <!-- DBRENDER SECTION -->
+
+        <section id="engine-dbrender">
+            <h2>dBrender</h2>
+            <p>dBrender is the rendering engine used by dBengine. It is responsible for rendering 3D graphics, handling
+                lighting, shadows, and post-processing effects.</p>
+
+
+            <div class="accordion" id="accordion-dbrender-features">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-pbr" aria-expanded="false" aria-controls="collapse-input">
+                            Physically Based Rendering (PBR)
+                        </button>
+                    </h2>
+                    <div id="collapse-pbr" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+
+                            <p>
+                                dBrender supports Physically Based Rendering (PBR), which allows for realistic lighting
+                                and
+                                material interactions. It uses a combination of textures and shaders to achieve this
+                                effect, as well as
+                                the Cook-Torrance BRDF, the core of realistic lighting in PBR
+                                workflows. It models how light interacts with microfaceted surfaces, accounting for
+                                material roughness and view/light
+                                angles. </p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/pbr.gif" class="card-img-top card-img"
+                                    alt="Lights in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-lights" aria-expanded="false" aria-controls="collapse-input">
+                            Lights (Directional, Point, Spot)
+                        </button>
+                    </h2>
+                    <div id="collapse-lights" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>dBrender supports various types of lights, including directional, point, and spot lights.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-shadows" aria-expanded="false" aria-controls="collapse-input">
+                            Dynamic Shadows (with PCF filtering)
+                        </button>
+                    </h2>
+                    <div id="collapse-shadows" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>Dynamic shadows are implemented using Percentage Closer Filtering (PCF), which helps to
+                                create soft shadows that more accurately represent the way light interacts with objects
+                                in the scene. This technique samples the depth of the shadow map at multiple points
+                                within the shadow's area, resulting in smoother transitions between light and shadow.
+                            </p>
+
+                            <p>Each light can be configured to cast dynamic shadows or not.</p>
+                            <p>To preserve performance each shadow is only regenerated when the light moves or the scene
+                                changes significantly.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/shadows.webp" class="card-img-top card-img"
+                                    alt="Shadows in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-post-processing" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Post processing effects
+                        </button>
+                    </h2>
+                    <div id="collapse-post-processing" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>Various post processing effects were implemented to enhance visuals that dBrender can
+                                provide.</p>
+
+                            <h4>Bloom</h4>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/bloom.png" class="card-img-top card-img"
+                                    alt="Bloom in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Bloom is a post-processing effect that simulates the way light
+                                        bleeds around bright areas in a scene, creating a soft glow effect.</p>
+                                </div>
+                            </div>
+
+                            <h4>Vignette</h4>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/vignette.png" class="card-img-top card-img"
+                                    alt="Vignette in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Vignette is a post-processing effect that darkens the corners
+                                        of the
+                                        screen, drawing attention to the center of the image.</p>
+                                </div>
+                            </div>
+
+                            <h4>Fisheye (HUD)</h4>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/fisheye.png" class="card-img-top card-img"
+                                    alt="Fisheye in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Fisheye is a post-processing effect that creates a wide-angle
+                                        lens effect, distorting the image to simulate a fisheye lens.</p>
+                                </div>
+                            </div>
+
+                            <h4>Displacement, glitches (HUD)</h4>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/glitches.webp" class="card-img-top card-img"
+                                    alt="Displacement in dBengine">
+                            </div>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/glitch-effect.webp" class="card-img-top card-img"
+                                    alt="Glitch effect in dBengine">
+                            </div>
+
+                            <h4>Screen shake</h4>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/screenshake.webp" class="card-img-top card-img"
+                                    alt="Screen shake in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-animation" aria-expanded="false"
+                            aria-controls="collapse-animation">
+                            Skeletal Animation (with blending)
+                        </button>
+                    </h2>
+                    <div id="collapse-animation" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>Skeletal animation is a technique used to animate characters in a way that allows for
+                                smooth
+                                movement and blending between different animations. This is achieved by using a skeleton
+                                structure, where the character's mesh is attached to a hierarchy of bones. Each bone can
+                                be animated independently, allowing for complex movements and poses.</p>
+
+                            <p>Transition system allows users to create smooth transitions between different animations
+                                by blending their weights over time.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/transition.webp" class="card-img-top card-img"
+                                    alt="Transition in animation in dBengine">
+                            </div>
+
+                            <p>High performance was achieved through "flattening" the bones hierarchy, as iteration is
+                                faster than recursion.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/animation.webp" class="card-img-top card-img"
+                                    alt="Animation in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-particles" aria-expanded="false"
+                            aria-controls="collapse-particles">
+                            Particle System
+                        </button>
+                    </h2>
+                    <div id="collapse-particles" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>dBengine features a powerful particle system (CPU side) that allows for the creation of
+                                complex
+                                visual effects.
+                                Particles are small, lightweight objects that can be used to simulate a variety of
+                                phenomena,
+                                such as fire, smoke, rain, and explosions. The particle system is highly customizable,
+                                allowing
+                                users to tweak various parameters to achieve the desired look and behavior.</p>
+
+                            <p>In order to retain performance, particles are using instanced rendering.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/particles.webp" class="card-img-top card-img"
+                                    alt="Particle System in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-ibl" aria-expanded="false" aria-controls="collapse-ibl">
+                            Image-Based Lighting (IBL)
+                        </button>
+                    </h2>
+                    <div id="collapse-ibl" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>Image-Based Lighting (IBL) is a rendering technique that uses images to provide realistic
+                                lighting
+                                for 3D scenes. By capturing the lighting information from real-world environments, IBL
+                                allows
+                                for more accurate and dynamic lighting effects in virtual scenes.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/ibl.gif" class="card-img-top card-img"
+                                    alt="Image-Based Lighting in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-shader-hot-reload" aria-expanded="false"
+                            aria-controls="collapse-shader-hot-reload">
+                            Shader Hot Reloading
+                        </button>
+                    </h2>
+                    <div id="collapse-shader-hot-reload" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>Shader Hot Reloading is a feature that allows users to make changes to shaders and
+                                see the results in real-time without restarting the application.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/shader-hot-reload.webp" class="card-img-top card-img"
+                                    alt="Shader Hot Reloading in dBengine">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-hdr" aria-expanded="false" aria-controls="collapse-hdr">
+                            HDR
+                        </button>
+                    </h2>
+                    <div id="collapse-hdr" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>High Dynamic Range (HDR) rendering is a technique used to reproduce a greater range of
+                                luminosity
+                                than what is possible with standard digital imaging techniques. This allows for more
+                                realistic
+                                lighting and color representation in 3D scenes.</p>
+
+                            <p>Engine allows user to set an exposure level used in HDR rendering.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-msaa" aria-expanded="false" aria-controls="collapse-msaa">
+                            MSAA (Multisample Anti-Aliasing)
+                        </button>
+                    </h2>
+                    <div id="collapse-msaa" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>Multisample Anti-Aliasing (MSAA) is a technique used to reduce aliasing artifacts in 3D
+                                rendering.
+                                By sampling multiple points within each pixel and averaging the results, MSAA produces
+                                smoother
+                                edges and improved image quality.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/msaa.gif" class="card-img-top card-img"
+                                    alt="MSAA in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">MSAA 2x and MSAA 8x, when cube is seen at a distance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+        <br>
+
+        <!-- DBPHYSICS SECTION -->
+
+        <section id="engine-dbphysics">
+            <h2>dBphysics</h2>
+
+            <p>dBphysics is the physics engine used by dBengine. It is responsible for simulating physics interactions
+                between game objects, including collision detection and response.</p>
+
+            <div class="accordion" id="accordion-dbphysics-features">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-collision-shapes" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Collision shapes
+                        </button>
+                    </h2>
+                    <div id="collapse-collision-shapes" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbphysics-features">
+                        <div class="accordion-body">
+
+                            <p>Collision shapes are used in dBphysics to define the physical boundaries of game objects.
+                                These shapes are essential for accurate collision detection and response. dBphysics
+                                supports
+                                two collision shapes: boxes and capsules, allowing for flexible
+                                and efficient physics simulations.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/collision-shapes.png" class="card-img-top card-img"
+                                    alt="Collision Shapes in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Collision shapes are also capable of masking, which enables
+                                        selective collision detection based on the object's state or other criteria.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-physics-body" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Physics Body
+                        </button>
+                    </h2>
+                    <div id="collapse-physics-body" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbphysics-features">
+                        <div class="accordion-body">
+
+                            <p>Physics bodies are used in dBphysics to define the physical properties of game objects.
+                                These properties include mass, velocity, and friction, which are essential for realistic
+                                physics simulations. dBphysics supports two types of physics bodies: dynamic and static.
+                            </p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/physics-body.webp" class="card-img-top card-img"
+                                    alt="Physics Body in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Physics bodies are affected by gravity (if not static) and can interact with
+                                        other
+                                        physics bodies in the scene.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-areas" aria-expanded="false" aria-controls="collapse-input">
+                            Areas
+                        </button>
+                    </h2>
+                    <div id="collapse-areas" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbphysics-features">
+                        <div class="accordion-body">
+
+                            <p>Areas are triggers that detects when other collision shapes enter them.</p>
+
+                            <p>They are a part of <code>collision shapes</code>, when enabled in inspector.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-octree" aria-expanded="false" aria-controls="collapse-input">
+                            Octree
+                        </button>
+                    </h2>
+                    <div id="collapse-octree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbphysics-features">
+                        <div class="accordion-body">
+
+                            <p>Octrees are a spatial partitioning structure used in dBphysics to efficiently manage and
+                                query
+                                3D space. They work by recursively subdividing the 3D space into smaller regions (nodes)
+                                to improve the performance of collision detection and other spatial queries.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/octree.png" class="card-img-top card-img"
+                                    alt="Octree in dBengine">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+        <br>
+
+        <!-- DBEDITOR SECTION -->
+
+        <section id="engine-dbeditor">
+            <h2>dBeditor</h2>
+
+            <p>dBeditor is an integrated dBengine's editor that provides a user-friendly interface for creating and
+                managing game assets.</p>
+
+            <div class="screenshot-card card mb-3 ">
+                <img src="/res/img/dbengine/editor.png" class="card-img-top card-img" alt="Editor in dBengine">
+                <div class="card-body">
+                    <p class="card-text">dBengine's editor provides a modern and intuitive interface for users to create
+                        and manage game assets efficiently.</p>
+                </div>
+            </div>
+
+            <div class="accordion" id="accordion-dbeditor-features">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-file-explorer" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            File Explorer
+                        </button>
+                    </h2>
+                    <div id="collapse-file-explorer" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbeditor-features">
+                        <div class="accordion-body">
+
+                            <p>The File Explorer in dBeditor allows users to navigate and manage their project files
+                                easily. It provides a hierarchical view of all assets, making it simple to organize and
+                                locate game resources.</p>
+
+                            <p>Users can create, delete, and rename files and folders directly within the File Explorer.
+                            </p>
+                            <p>Additionally, the File Explorer supports drag-and-drop functionality, allowing users to
+                                easily apply assets and resource in the inspector.</p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/file-explorer.webp" class="card-img-top card-img"
+                                    alt="File Explorer in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        File dialog enabled using <a href="https://github.com/aiekick/ImGuiFileDialog"
+                                            target="_blank">ImGuiFileDialog</a> library.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="screenshot-card card mb-3 " style="width: 300px;">
+                                <img src="/res/img/dbengine/file-explorer-creation.webp" class="card-img-top card-img"
+                                    alt="File Explorer actions in dBengine" width="300" height="400">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-inspector" aria-expanded="false" aria-controls="collapse-input">
+                            Inspector
+                        </button>
+                    </h2>
+                    <div id="collapse-inspector" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbeditor-features">
+                        <div class="accordion-body">
+
+                            <p>Built-in inspector allows users to manage game objects, components and adjust their
+                                properties.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-debug" aria-expanded="false" aria-controls="collapse-input">
+                            Debug
+                        </button>
+                    </h2>
+                    <div id="collapse-debug" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbeditor-features">
+                        <div class="accordion-body">
+
+                            <p>Debug view displays important information (like fps, update time, console) to provide
+                                insight on game's performance and behavior.</p>
+
+                            <p>Additionally, users can test shaders and other effects.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-gizmos" aria-expanded="false" aria-controls="collapse-input">
+                            Gizmos
+                        </button>
+                    </h2>
+                    <div id="collapse-gizmos" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbeditor-features">
+                        <div class="accordion-body">
+
+                            <p>Gizmos are visual aids that help developers understand and manipulate the 3D space in
+                                their game scenes.</p>
+
+                            <p>Gizmos were implemented using <a href="https://github.com/CedricGuillemet/ImGuizmo"
+                                    target="_blank">ImGuizmo</a> library.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-panels" aria-expanded="false" aria-controls="collapse-input">
+                            Panels
+                        </button>
+                    </h2>
+                    <div id="collapse-panels" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbeditor-features">
+                        <div class="accordion-body">
+
+                            <p>Panels are my custom-made widgets used to manipulate properties.</p>
+
+                            <p>Examples are:</p>
+                            <ul>
+                                <li>Transform Panel</li>
+                                <li>Material Panel</li>
+                                <li>Min/max values slider</li>
+                                <li>Vec2 Slider</li>
+                                <li>Vec3 Slider</li>
+                                <li>Colored Buttons</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-animation-library" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Animation library
+                        </button>
+                    </h2>
+                    <div id="collapse-animation-library" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbeditor-features">
+                        <div class="accordion-body">
+
+                            <p>Animation library is a container for all animations, resulting in a more organized and
+                                efficient workflow. It manages their loading and processing on meshes.</p>
+
+                            <p>It also makes sure, that an animation is loaded only once to preserve memory.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+        <br>
+        <!-- Components -->
+
+        <section id="engine-structure">
+            <h2>Structure</h2>
+
+            <p>dBengine is designed with a mix of Unity's Engine and Godot Engine's approach.</p>
+            <p>Game Objects are used to define every entity in the scene (UI, 3D, Meshes etc.) and components can be
+                attached to them.</p>
+            <p>Scenes are everything that can be rendered. <i>What does it mean?</i> Scene can contain a scene (like in
+                Godot
+                Engine), so every composition of game objects can be preserved as a packed scene for a later use.</p>
+
+            <div class="accordion" id="accordion-components-features">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-animator" aria-expanded="false" aria-controls="collapse-input">
+                            Animator
+                        </button>
+                    </h2>
+                    <div id="collapse-animator" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Animator component is responsible for controlling animations on a game object. It
+                                allows you to create, blend, and manage animations easily.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-audio" aria-expanded="false" aria-controls="collapse-input">
+                            Audio Listener / Audio Source
+                        </button>
+                    </h2>
+                    <div id="collapse-audio" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Audio Listener component is responsible for receiving audio from the environment,
+                                while the Audio Source component is responsible for playing audio clips.</p>
+
+                            <p>Audio system was built using FMOD library.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-camera" aria-expanded="false" aria-controls="collapse-input">
+                            Camera
+                        </button>
+                    </h2>
+                    <div id="collapse-camera" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Camera component is responsible for rendering the game world from a specific
+                                viewpoint. It defines the player's perspective and controls what is visible on the
+                                screen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-collision" aria-expanded="false" aria-controls="collapse-input">
+                            Collision Shape
+                        </button>
+                    </h2>
+                    <div id="collapse-collision" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Collision Shape component is responsible for defining the shape of a game object's
+                                collider. It is used for detecting collisions with other objects in the game world.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-control" aria-expanded="false" aria-controls="collapse-input">
+                            Control
+                        </button>
+                    </h2>
+                    <div id="collapse-control" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The control component family is responsible for creating UI</p>
+
+                            <p>It includes:</p>
+                            <ul>
+                                <li>Button</li>
+                                <li>Sprite</li>
+                                <li>Text</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-lights" aria-expanded="false" aria-controls="collapse-input">
+                            Lights
+                        </button>
+                    </h2>
+                    <div id="collapse-lights" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>Lights included in dBengine are:</p>
+                            <ul>
+                                <li>Directional Light</li>
+                                <li>Point Light</li>
+                                <li>Spot Light</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-lua" aria-expanded="false" aria-controls="collapse-input">
+                            Lua Component
+                        </button>
+                    </h2>
+                    <div id="collapse-lua" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>Lua component is responsible for creating a <code>Lua</code> server for the script to be
+                                attached to.</p>
+
+                            <p>It allows users to write scripts in Lua, which can be used to control game logic, events,
+                                and
+                                interactions.</p>
+
+                            <p>It's responsible for exposing engine's API to <code>lua</code> scripts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-mesh" aria-expanded="false" aria-controls="collapse-input">
+                            Mesh Instance
+                        </button>
+                    </h2>
+                    <div id="collapse-mesh" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Mesh Instance component is responsible for rendering a 3D mesh in the game world. It
+                                allows users to define the mesh's geometry, materials, and other properties.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-particlesystem" aria-expanded="false"
+                            aria-controls="collapse-input">
+                            Particle System
+                        </button>
+                    </h2>
+                    <div id="collapse-particlesystem" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Particle System component is responsible for creating and managing particle effects
+                                in the game. It allows users to define particle properties such as lifetime, size,
+                                color, and behavior.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-pb" aria-expanded="false" aria-controls="collapse-input">
+                            Physics Body
+                        </button>
+                    </h2>
+                    <div id="collapse-pb" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Physics Body component is responsible for simulating physics on a game object. It
+                                allows you to define properties such as mass, friction, and enables
+                                collision detection and response.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-tag" aria-expanded="false" aria-controls="collapse-input">
+                            Tag
+                        </button>
+                    </h2>
+                    <div id="collapse-tag" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>This component allows users to tag game objects with specific labels for easier
+                                identification and organization.</p>
+
+                            <p>Those tags can later be detected in scripts and used for various purposes, such as
+                                filtering or grouping game objects.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-timer" aria-expanded="false" aria-controls="collapse-input">
+                            Timer
+                        </button>
+                    </h2>
+                    <div id="collapse-timer" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Timer component is responsible for managing time-based events in the game. It allows
+                                you to create timers that can trigger actions after a specified duration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-transform" aria-expanded="false" aria-controls="collapse-input">
+                            Transform
+                        </button>
+                    </h2>
+                    <div id="collapse-transform" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>The Transform component is responsible for managing the position, rotation, and scale of
+                                a game object in 2D or 3D space.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-we" aria-expanded="false" aria-controls="collapse-input">
+                            World Environment
+                        </button>
+                    </h2>
+                    <div id="collapse-we" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-components-features">
+                        <div class="accordion-body">
+                            <p>This component manages the creation of skyboxes and IBL maps.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <br>
+        <!-- Download -->
+
+        <section id="engine-download">
+            <h1>Download</h2>
+                <hr>
+
+                <p>dBengine and dBeditor is available to download from my GitHub repository. However, all of the
+                    development
+                    is kept in private repository and when set goals are met, it's then forked to public repository.</p>
+
+                <p>All of dBengine's source code is available for everyone as well.</p>
+
+                <h4>How to run dBeditor?</h4>
+
+                <p>To run dBeditor all you need to do is launch the dBengine.exe. That's all.</p>
+
+                <h4>How to run a scene in runtime?</h4>
+
+                <p>To run a scene in runtime, you can use command line arguments.</p>
+
+                <p>To run dBengine from a scene, you need to enter: <code>.\dBengine.exe --scene "path to scene"</code>,
+                    where path is placed in <code>res</code> directory for user's convinience.</p>
+
+                <p>To run dBengine from a scene with editor disabled, you need to add another argument:
+                    <code>--no-editor</code>. <br>So final command would look like:
+                    <code>.\dBengine.exe --no-editor --scene "path to scene"</code>.
+                </p>
+
+                <div class="card" style="width: 30rem; margin: auto;">
+                    <img src="/res/img/dbengine/dBengine_logo_white.png" class="card-img-top" alt="dBengine logo">
+                    <div class="card-body">
+                        <h5 class="card-title">dBengine GitHub Repository</h5>
+                        <p class="card-text">Access latest dBengine build and source code.</p>
+                        <a href="https://github.com/HeadAech/dBengine-public" class="btn btn-primary" target="_blank">Go
+                            to
+                            repository...</a>
+                    </div>
+                </div>
+        </section>
+        <br>
+    </div>
+</body>
+
+</html>

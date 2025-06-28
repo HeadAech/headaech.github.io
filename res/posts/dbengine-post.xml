@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<post>
+  <title>3 months progress on my game engine</title>
+  <date>2025-06-28 16:00</date>
+  <author>Hubert Klonowski</author>
+  <summary>An update on dBengine's development</summary>
+  <content>
+    <![CDATA[
+      <h2>Hi there!</h2>
+      <p>It’s been 3 months since I started working on dBengine, and I wanted to share some updates.</p>
+
+      <b>ZTGK Challenge</b>
+    <p>Past two days I participated in the <a href="https://gry.it.p.lodz.pl/main/index.php/pl/" target="_blank">ZTGK Challenge</a>, a game development competition organized by the Lodz University of Technology.</p>
+    <p>Me and my team <code>decybels games</code> created a game called <i>Orpheus</i>, a 3D hack 'n' slash game with a musical twist. <small><i>More on that in the future...</i></small></p>
+
+    <b>dBengine</b>
+
+    <p>After the emotions and stress of the competition have passed, I put up a showcase site for dBengine, which you can find <a href="/src/projects/dbengine.html" target="_blank">here</a>!</p>
+    <p>It contains a list of features, an engine's history and more.</p>
+
+    <p>Please take a look and remember that it is still a work in progress, so some things may not work as expected. But fear not, I am constantly working on improvements!</p>
+
+    <p>A big thank you to everyone who has been actively helping in the development of dBengine, and until next time!</p>
+
+    <p>Hubert</p>
+    ]]>
+  </content>
+</post>

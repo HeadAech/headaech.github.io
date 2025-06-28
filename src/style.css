@@ -2,8 +2,9 @@
 
 body,
 html {
-    font-family: FiraCode;
+    font-family: Inter;
     background-color: var(--main);
+    scroll-behavior: smooth;
 }
 
 * {
@@ -57,6 +58,7 @@ html {
 
 .nav {
     float: right;
+    font-weight: bold;
 }
 
 .nav>li {
@@ -134,10 +136,84 @@ footer {
     float: right;
 }
 
+.footer-text {
+    display: block;
+    float: left;
+}
+
 .socials>.social-buttons>a {
     background-color: var(--button);
 }
 
 .socials>.social-buttons>a:hover {
     background-color: var(--button-hover);
+}
+
+button {
+    background-color: var(--button);
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+a[type="button"] {
+    background-color: var(--button);
+}
+
+a[type="button"]:hover {
+    background-color: var(--button-hover);
+}
+
+a.btn-primary {
+    background-color: var(--button);
+}
+
+a.btn-primary:hover {
+    background-color: var(--button-hover);
+}
+
+a.btn-outline-primary {
+    color: var(--button);
+    border-color: var(--button);
+}
+
+a.btn-outline-primary:hover {
+    border-color: var(--button-hover);
+}
+
+.screenshot-card {
+    margin: auto;
+    max-width: 70%;
+}
+
+.thumbnail-card {
+    margin: auto;
+    max-width: 40%;
+}
+
+.centered {
+    text-align: center;
+}
+
+.dbengine-logo {
+    width: 20rem;
+    display: block;
+    float: left;
+}
+
+.engine-intro {
+    width: 40%;
+    display: block;
+    clear: left;
+    float: left;
+}
+
+.tableofcontents {
+    width: 50%;
+    float: right;
+}
+
+#engine-history {
+    clear: both;
 }

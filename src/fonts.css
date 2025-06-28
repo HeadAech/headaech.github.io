@@ -31,3 +31,20 @@
     src: url(../res/fonts/MPlusCode/MPLUSCodeLatin-Light.ttf);
     font-weight: lighter;
 }
+
+@font-face {
+    font-family: Inter;
+    src: url(/res/fonts/Inter/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(/res/fonts/Inter/Inter-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(/res/fonts/Inter/Inter-Light.ttf);
+    font-weight: lighter;
+}
