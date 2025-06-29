@@ -721,6 +721,31 @@
                     </div>
                 </div>
 
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-culling" aria-expanded="false" aria-controls="collapse-culling">
+                            Frustum Culling
+                        </button>
+                    </h2>
+                    <div id="collapse-culling" class="accordion-collapse collapse"
+                        data-bs-parent="#accordion-dbrender-features">
+                        <div class="accordion-body">
+                            <p>
+                                Frustum Culling is a technique used to improve performance by not rendering objects that are outside of the current camera's view frustum.
+                            </p>
+
+                            <div class="screenshot-card card mb-3 ">
+                                <img src="/res/img/dbengine/fculling.webp" class="card-img-top card-img"
+                                    alt="Frustum Culling in dBengine">
+                                <div class="card-body">
+                                    <p class="card-text">Objects that are outside the current view are not rendered. As a result, the draw calls count decreases.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
